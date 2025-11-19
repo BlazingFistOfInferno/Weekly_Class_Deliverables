@@ -1,0 +1,28 @@
+terraform notes
+
+https://www.youtube.com/watch?v=K2WHXgU-Km0
+
+https://www.youtube.com/watch?v=AgFcX-H3SJU
+
+https://perchance.org/welcome
+
+
+from what i believe I can do
+
+build 3 ec2, 1 in a public subnet
+2 in private subnets
+
+in theory it should be straightforward
+
+
+m7i-flex.large
+ani = "ami-0b4bc1e90f30ca1ec"
+I need to add rdp to the ingress rules for the windows server
+
+ssh
+rdp
+http
+I think.....
+
+
+

@@ -1,0 +1,75 @@
+For when we did the loadbalancer or asg in class via the console
+
+provides autohealing
+healthchecks
+
+this is the purpose of why we have health checks
+
+
+
+1 2 3
+typically 
+
+
+we would want more than 1 az
+desired is double capacity
+max is 
+
+2 desired
+1 min 3 max
+
+
+we used 
+3 desired
+1 min 6 max yesterday
+
+minimum 1 for every az
+
+target tracking  is for automatic scaling
+this would be horizontal scaling, rapid horizontal scaling
+the policy would be requests per second
+write a policy that determines that if we go beyond the typial requests for policy
+and adjust
+our application is stateless
+
+we can write custom policies via cloudwatch
+metrics
+alb can measure number of requests (application load balancer)
+nlb cannot measure it		   (network load balancer)	
+
+scaling policy
+metric type - average
+
+
+target value is a threshold percent that we want to keep an eye on
+if it hits it we create a scale out event
+if below, its a scale in
+300 seconds before it fire up an another instance
+Instance warmup - 300
+see above
+
+I need to go back through clickops nd take note of all the steps we di. this wa, we an do all this interraform
+via a template format
+
+asg
+lb listener
+target groups
+lb
+lt
+ec2
+lb-sg
+terraform destroy
+
+
+
+Delete Auto Scaling Groups
+Delete Load Balance Listener(s)
+Delete Target Groups
+Delete Load Balancer
+Delete Launch Template
+Delete EC2 Instances
+Delete SCGs
+
+
+Terraform Destroy in VS Code
+

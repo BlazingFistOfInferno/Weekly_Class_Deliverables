@@ -1,0 +1,37 @@
+an asg autoscales
+
+thresholds for autoscaling
+
+
+
+
+
+https://x.com/ari_n3ko?lang=en
+
+
+terraform apply -auto-approve
+
+anton putra
+
+
+
+
+1. Open up http://webgraphviz.com/ 
+2. In your VS Code Terminal window run  terraform graph 
+3. Copy all the results
+4. Copy and paste the results in in webgraphviz
+5. Zoom to Thailand and GET MONEY
+
+
+
+
+to create the image
+@Kofa Use the following command:  terraform graph -type=plan | dot -Tpng >graph.png
+
+
+07-launchtemplate
+08-
+09-
+10-
+
+
