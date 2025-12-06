@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)http://static-site-lab-aaronmcd.s3-website-ap-southeast-1.amazonaws.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Static Website Lab</title>
+    <link rel="stylesheet" href="./S3 Static Website LabA_files/styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>S3 STATIC WEBSITE LAB</h1>
+        
+        <!-- Dynamic title that changes with each image -->
+        <h2 id="image-title" class="image-title">Mountain Landscape</h2>
+        
+        <div class="gallery">
+            <img src="./S3 Static Website LabA_files/image1.jpg" alt="Breasts!" class="gallery-image active" data-title="Alex&#39;s favorite creator">
+            <img src="./S3 Static Website LabA_files/image2.jpg" alt="Japan" class="gallery-image" data-title="Japan representing">
+            <img src="./S3 Static Website LabA_files/image3.jpg" alt="Thailand" class="gallery-image" data-title="Random Thai chick">
+        </div>
+
+        <div class="gallery-controls">
+            <button class="btn" onclick="previousImage()">← PREV</button>
+            <span class="counter"><span id="current">1</span> / 3</span>
+            <button class="btn" onclick="nextImage()">NEXT →</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot active" onclick="goToImage(0)"></span>
+            <span class="dot" onclick="goToImage(1)"></span>
+            <span class="dot" onclick="goToImage(2)"></span>
+        </div>
+    </div>
+
+    <script src="./S3 Static Website LabA_files/script.js.download"></script>
+
+</body></html>
