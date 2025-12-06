@@ -1,0 +1,91 @@
+########################## Public rtb ##########################
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.fortressmaximus-vpc.id
+
+  # default gateway route 
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.fortressmaximus-igw.id
+  }
+
+  tags = {
+    Name = "fortressmaximus-public-rtb"
+  }
+}
+
+resource "aws_route_table_association" "public-subnet-us-east-1a" {
+  subnet_id      = aws_subnet.public-subnet-us-east-1a.id
+  route_table_id = aws_route_table.public.id
+}
+
+
+################ ultramagnus
+
+
+resource "aws_route_table" "public-us-west-2" {
+  provider = aws.usw2
+  vpc_id = aws_vpc.ultramagnus-vpc.id
+
+  # default gateway route 
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.ultramagnus-igw.id
+  }
+
+  tags = {
+    Name = "ultramagnus-public-rtb"
+  }
+}
+
+resource "aws_route_table_association" "public-subnet-us-west-2a" {
+  provider = aws.usw2
+  subnet_id      = aws_subnet.public-subnet-us-west-2a.id
+  route_table_id = aws_route_table.public-us-west-2.id
+}
+
+
+
+
+
+# resource "aws_route_table_association" "public-subnet-us-east-1b" {
+#   subnet_id      = aws_subnet.public-subnet-us-east-1b.id
+#   route_table_id = aws_route_table.public.id
+# }
+
+# resource "aws_route_table_association" "public-subnet-us-east-1c" {
+#   subnet_id      = aws_subnet.public-subnet-us-east-1c.id
+#   route_table_id = aws_route_table.public.id
+# }
+
+
+
+########################## Private rtb ##########################
+# resource "aws_route_table" "private" {
+#   vpc_id = aws_vpc.fortressmaximus-vpc.id
+
+#   # default gateway route 
+#   route {
+#     cidr_block = "0.0.0.0/0"
+#     gateway_id = aws_nat_gateway.fortressmaximus-nat-igw.id
+#   }
+
+#   tags = {
+#     Name = "fortressmaximus-private-rtb"
+#   }
+# }
+
+# resource "aws_route_table_association" "private-subnet-us-east-1a" {
+#   subnet_id      = aws_subnet.private-subnet-us-east-1a.id
+#   route_table_id = aws_route_table.private.id
+# }
+
+# resource "aws_route_table_association" "private-subnet-us-east-1b" {
+#   subnet_id      = aws_subnet.private-subnet-us-east-1b.id
+#   route_table_id = aws_route_table.private.id
+# }
+
+# resource "aws_route_table_association" "private-subnet-us-east-1c" {
+#   subnet_id      = aws_subnet.private-subnet-us-east-1c.id
+#   route_table_id = aws_route_table.private.id
+# }
